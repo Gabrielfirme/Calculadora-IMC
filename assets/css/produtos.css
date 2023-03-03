@@ -1,0 +1,29 @@
+
+.slider{
+
+    margin: 10% auto;
+    width:95%;
+    height: 50vh;
+    overflow: hidden;
+
+}
+.slides-images{
+    width: 100%;
+}
+.slides {
+    width: 400%;
+    height: 40vh;
+    display: flex;
+}
+.slides input {
+    display: none;
+
+}
+.slide img{
+    width:800px;
+}
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: ;
+}

@@ -1,0 +1,21 @@
+@import url(header.css);
+@import url(produtos.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root {
+    --background:#e4e0f6;
+    --color1 :#FFF;
+    --color3 :#b90800;
+    --color4 :#c46100;
+    --text-color: #0000;
+    --font1:"poppins";
+}
+body{
+    background: var(--color1);
+}
