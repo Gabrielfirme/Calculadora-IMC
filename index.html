@@ -4,87 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <!-- or -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/stylle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/stylle.css">
-    <title>Fanáticos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Indice de massa corporal</title>
+    <script src="assets/js/script.js"defer></script>
 </head>
 <body> 
-  <header class=".header" id="header">
-    <div class="container">
-       <a href="#" class="logo"><i class='bx bx-football'></i> Fanáticos</a>
-      <ul class="navegação">
-        <!--itens do menu para navegação-->
-          <li class="item-nav"> <a href="#" class="link-nav">Futebol</a> </li>
-          <li class="item-nav"><a href="#" class="link-nav">Times</a></li>
-          <li class="item-nav"><a href="#" class="link-nav">Seleções</a></li>
-          <li class="item-nav"><a href="#" class="link-nav">Chuteiras</a></li>
-          <li class="item-nav"><a href="#" class="link-nav"> Bolas</a></li>
-        </ul>
-      
-      <div class="head-icons">
-        <!--Icones de menu hamburguer e card para colocar produtos-->
-        <i class='bx bx-cart'></i>
-        <div id="menu"><i class='bx bx-menu' ></i></div>
-      </div>
-    </div>
-
-    
-  </header>
-
-  
-     <main>
-       <div class="slider">
-       
-        <div class="slides">
-              <!--Radio Buttons-->
-              <input type="radio" name="radio-btn" id="radio1">
-              <input type="radio" name="radio-btn" id="radio2">
-              <input type="radio" name="radio-btn" id="radio3">
-              <input type="radio" name="radio-btn" id="radio4">
-              <!--Fim radio buttons-->
-              <!--Slides images-->
-              <div class="slide-first">
-                <img src="assets/img/bn_desk_lanc_manto1.png"  class="slides-images" alt="">
-              </div>
-              <div class="slide-first">
-                <img src="assets/img/Banner-Desk-Dia-internacional-da-mulher-1920x500.gif"  class="slides-images" alt="">
-              </div>
-              <div class="slide-first">
-                <img src="assets/img/Desk (2) (2).png"  class="slides-images" alt="">
-              </div>
-              <div class="slide-first">
-                <img src="assets/img/bn_desk_lanc_manto1.png"  class="slides-images" alt="">
-              </div>
-              <!--Fim do slides images-->
-              <!--Navigation Auto-->
-              <div class="navigation-auto">
-                  <div class="auto-btn1"></div>
-                  <div class="auto-btn2"></div>
-                  <div class="auto-btn3"></div>
-                  <div class="auto-btn4"></div>
-              </div>
-              <!--Referência dos labels com os inputs de radio na div Slides-->
-              <div class="manual-navigation">
-                <label for="radio1"></label>
-                <label for="radio2"></label>
-                <label for="radio3"></label>
-                <label for="radio4"></label>
-              </div>
+      <div class="container">
+        <!--Container que nevolve todo contéudo da calculadora-->
+          <div id="calc-container">
+            <h2> Calculadora IMC </h2>
+            <form id="imc-form">
+                <div class="form-inputs">
+                    <div class="form-control">
+                        <label for="height"> Altura </label>
+                        <input type="text" name="height" id="height" placeholder="1,75">
+                    </div>
+                  </div>    
+                    <div class="form-control">
+                        <label for="weight"> Peso </label>
+                        <input type="text" 
+                          name="weight" 
+                          id="weight" 
+                          placeholder="80,65"
+                        />
+                    </div>  
+                </div>
+                <div class="action-control">
+                  <button id="calc-btn"> Calcular </button>
+                  <button id="clear-btn"> Limpar </button>
+            </form>
           </div>
-       </div>
-
-       <section id="produtos">
-
-        
-       </section>
-     </main>
- 
-    <script src="assets/script.js"></script>
-    </body>
+          <div id="result-container" class="hide">
+            <p class="imc-number"> Seu IMC: <span></span></p>
+            <p class="imc-info">Situação atual: <span></span></p>
+            <h3>Confira as classificações:</h3>
+         
+            <div id="imc-table">
+                <div class="table-header">
+                  <h4>IMC</h4>
+                  <h4>Classificação</h4>
+                  <h4>Obesidade</h4>
+                </div>
+            </div>
+            <button id="back-btn">Voltar</button>
+          </div>
+          
+      </div>
+  
+</body>
 </html>
