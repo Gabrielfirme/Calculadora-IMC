@@ -11,6 +11,7 @@
     --bg-color-ct:#1d1e33;
     --label-color:#ccc;
     --text-color:#FFF;
+    --bg-button:#F44236;
     --font-main:"Lato,sans-serif";
 }
 body{
@@ -57,3 +58,30 @@ body{
 .form-control input {
     padding: 1rem .5rem;
 }
+.action-control{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 2rem;
+    gap:1rem;
+}
+
+button{
+    text-transform: uppercase;
+    padding:1rem 1.5rem;
+    background: var(--bg-button);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    opacity: 0.9;
+    flex:1;
+
+}
+button:hover{
+    opacity: 1;
+
+}
+#clear-btn{
+    background: #444;
+}
+/*Table*/
+
