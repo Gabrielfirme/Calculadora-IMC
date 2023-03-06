@@ -14,50 +14,64 @@
 <body> 
       <div class="container">
         <!--Container que nevolve todo contéudo da calculadora-->
-          <div id="calc-container">
-            <h2> Calculadora IMC </h2>
-            <form id="imc-form">
-                <div class="form-inputs">
-                    <div class="form-control">
-                        <label for="height"> Altura </label>
-                        <input type="text" name="height" id="height" placeholder="1,75">
+          <div id="calc-container"  >
+                <h2> Calculadora IMC </h2>
+                <!--formulário para o imc-->
+                <form id="imc-form">
+                  <!--espaço destinado para os inputs-->
+                    <div class="form-inputs">
+                      <!--controle de formulário para a altura do individuo-->
+                        <div class="form-control">
+                          <!--label para identificar os inputs relacionados a altura--> 
+                            <label for="height"> Altura </label>
+                            <!--Preenchimentos de informações relacionadas a altura-->
+                            <input 
+                                type="text" 
+                                name="height" 
+                                id="height" 
+                                placeholder="1,75"
+                            />
+                        </div>   
+                        <div class="form-control">
+                          <!--controle de formulário para o peso do individuo-->
+                            <label for="weight"> Peso </label>
+                            <!--Preenchimentos de informações relacionadas ao peso-->
+                            <input type="text" 
+                              name="weight" 
+                              id="weight" 
+                              placeholder="80,65"
+                            />
+                        </div>  
                     </div>
-                  </div>    
-                    <div class="form-control">
-                        <label for="weight"> Peso </label>
-                        <input type="text" 
-                          name="weight" 
-                          id="weight" 
-                          placeholder="80,65"
-                        />
-                    </div>  
+                    <div class="action-control">
+                      <!--Botões para realizar o cálculo ou limpar a área de preenchimento para novo questionário-->
+                      <button id="calc-btn"> Calcular </button>
+                      <button id="clear-btn"> Limpar </button>
+                    </div>
+                </form>
+              </div>    
+              <div id="result-container" >
+                <!--container para resultados-->
+                <p class="imc-number"> Seu IMC: <span >25</span></p>
+                <p class="imc-info">Situação atual: <span >Magreza</span></p>
+                <h3>Confira as classificações:</h3>
+            
+                <div id="imc-table">
+                  <!--tabela de imc-->
+                    <div class="table-header">
+                      <!--header da tabela de imc contendo as principais informações-->
+                      <h4>IMC</h4>
+                      <h4>Classificação</h4>
+                      <h4>Obesidade</h4>
+                    </div>
                 </div>
-                <div class="action-control">
-                  <button id="calc-btn"> Calcular </button>
-                  <button id="clear-btn"> Limpar </button>
-            </form>
-          </div>
-          <div id="result-container" class="hide">
-            <p class="imc-number"> Seu IMC: <span></span></p>
-            <p class="imc-info">Situação atual: <span>Magreza</span></p>
-            <h3>Confira as classificações:</h3>
-         
-            <div id="imc-table">
-                <div class="table-header">
-                  <h4>IMC</h4>
-                  <h4>Classificação</h4>
-                  <h4>Obesidade</h4>
-                </div>
-                <div class="table-data">
-                  <p>Menor que 18,5</p>
-                  <p>Magreza</p>
-                  <p>0</p>
-                </div>
+                <!--Button para voltar a página inicial-->
+                <button id="back-btn">Voltar</button>
+              </div>
             </div>
-            <button id="back-btn">Voltar</button>
+
+
           </div>
-          
-      </div>
-  
+      
 </body>
 </html>

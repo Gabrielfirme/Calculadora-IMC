@@ -83,9 +83,12 @@ button:hover{
 #clear-btn{
     background: #444;
 }
+
 /*Table*/
 #result-container{
     text-align: center;
+    display: flex;
+    flex-direction: column;
 
 }
 .imc-number{
@@ -104,4 +107,39 @@ button:hover{
     margin: 1.5rem 0;
     font-size: .8rem;
 }
+.table-header {
+    font-weight: bold;
+    color:var(--label-color);
 
+}
+.table-header,.table-data{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #444 ;
+
+}
+.table-header h4, .table-data p{
+    flex: 1;
+}
+.table-header h4:nth-child(3), .table-data p:nth-child(3){
+    max-width:80px;
+}
+#back-btn{
+    align-self: center;
+}
+.bom{
+    color:#12db34;
+
+}
+.baixa{
+    color:#dbce12;
+}
+.media{
+    color: #db6212;
+
+}
+.alta{
+    color:#db1912;
+}
