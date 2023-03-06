@@ -84,4 +84,24 @@ button:hover{
     background: #444;
 }
 /*Table*/
+#result-container{
+    text-align: center;
+
+}
+.imc-number{
+    font-size: 2.4rem;
+    margin-bottom: .6rem;
+}
+.imc-info{
+    font-size: 1.4rem;
+    color:#ccc;
+}
+#result-container h3{
+    margin-top: 1rem;
+    color: #dfdfdf;
+}
+#imc-table{
+    margin: 1.5rem 0;
+    font-size: .8rem;
+}
 
