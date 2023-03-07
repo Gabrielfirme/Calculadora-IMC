@@ -3,16 +3,23 @@
         {
             min:0,
             max:18.4,
-            classication:"Menor que 18,5",
+            classification:"Menor que 18,5",
             info:"Magreza",
             obesity:"0",
         },
         {
             min:18.5,
             max:24.9,
-            classification: "Entre 18,5 e 24,9",
+            classification:"Entre 18,5 e 24,9",
             info:"Normal",
-            obesity:"I",
+            obesity:"0",
+        },
+        {
+            min: 25,
+            max: 29.9,
+            classification: "Entre 25,0 e 29,9",
+            info:"Sobrepeso",
+            obesity: "I",
         },
         {
             min:30,
@@ -24,11 +31,12 @@
         {
             min:40,
             max:99,
-            classification: "Maior que 40",
+            classification:"Maior que 40",
             info:"Obesidade Grave",
             obesity:"III",
-        }
+        },
     ];
+
     //Seleção dos elementos para disparar as funções
     const imcTable = document.querySelector("#imc-table");
     //ações principais de seleção
@@ -48,17 +56,26 @@
 
             const info = document.createElement("p");
             info.innerText = item.info;
-            const obesity = document.createElement("p");
-            info.innerText = item.obesity;
 
-            div.appendChild(classification)
-            div.appendChild(info)
-            div.appendChild(obesity)
+            const obesity = document.createElement("p");
+            obesity.innerText = item.obesity;
+
+            div.appendChild(classification);
+            div.appendChild(info);
+            div.appendChild(obesity);
             
             
-            imcTable.appendChild(div)
+            imcTable.appendChild(div);
             
         });
+    }
+    function cleanInputs(){
+        heightInput.value=""
+        weightInput.value=""
+
+    }
+    function validDigits(text){
+        return text.replace(/[^0-9,]/g,"");
     }
 
 
@@ -68,6 +85,21 @@
 
 
     //Eventos
+
+    [heightInput,weightInput].forEach((el) => {
+
+        el.addEventListener("input", (e) =>{
+            const updatedValue = validDigits(e.target.value);
+
+            e.target.value = updatedValue;
+
+        });
+    });
+    
+    clearBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        cleanInputs();
+    });
 
 
     
