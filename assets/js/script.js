@@ -45,6 +45,15 @@
     const calcBtn = document.querySelector("#calc-btn");
     const clearBtn = document.querySelector("#clear-btn");
 
+    const calcContainer = document.querySelector("#calc-container");
+    const resultContainer = document.querySelector("#result-container");
+
+    const imcNumber = document.querySelector("#imc-number span");
+    const imcInfo = document.querySelector("#imc-info span");
+
+    //elemento que terá a funcionalidade de voltar quando o usuário estiver na segunda tela de informações//
+    const backBtn = document.querySelector("#back-btn");
+
     //Funções 
     function createTable(data){
         data.forEach((item) => {
@@ -69,13 +78,26 @@
             
         });
     }
+    //função para limpar o campo dos inputs
     function cleanInputs(){
         heightInput.value=""
         weightInput.value=""
 
     }
+    //Validação dos caracteres que são aceitos neste campo de input//
     function validDigits(text){
         return text.replace(/[^0-9,]/g,"");
+    }
+    //função para realizar o cálculo do imc por meio da fórmula//
+    function calcImc (height,weight){
+        const imc = (weight/(height*height)).toFixed(1);
+
+        return imc;
+    }
+
+    function showOrHideResults(){
+        calcContainer.classList.toggle("hide");
+        resultContainer.classList.toggle("hide");
     }
 
 
@@ -95,10 +117,66 @@
 
         });
     });
+
+    calcBtn.addEventListener("click",(e)=> {
+        e.preventDefault();
+       
+        const weight= +weightInput.value.replace(",", ".");
+        const height= +heightInput.value.replace(",", ".");
+       
+        if(!weight || !height) return;
+
+        const imc = calcImc(height,weight);
+
+        let info;
+
+        data.forEach((item) => {
+            if(imc>=item.min && imc<=item.max ){
+                info = item.info;
+            }
+
+        });
+       
+        if(!info) return;
+
+        imcNumber.innerText = imc;
+        imcInfo.innerText = info;
+
+        switch(info){
+            case "Magreza":
+                imcNumber.classList.add("baixa");
+                imcInfo.classList.add("baixa");
+                break;
+             case "Normal":
+                imcNumber.classList.add("bom");
+                imcInfo.classList.add("bom");
+                break;
+            case "Sobrepeso":
+                imcNumber.classList.add("baixa");
+                imcInfo.classList.add("baixa");
+                break;
+            case "Obesidade":
+                imcNumber.classList.add("media");
+                imcInfo.classList.add("media");
+                break;
+            case "Obesidade grave":
+                    imcNumber.classList.add("alta");
+                    imcInfo.classList.add("alta");
+                    break;
+        }
+
+        showOrHideResults();
+
+    });
     
     clearBtn.addEventListener("click", (e) => {
         e.preventDefault();
         cleanInputs();
+    });
+
+    backBtn.addEventListener("click", () =>{
+        cleanInputs();
+        showOrHideResults();
     });
 
 
