@@ -80,8 +80,10 @@
     }
     //função para limpar o campo dos inputs
     function cleanInputs(){
-        heightInput.value=""
-        weightInput.value=""
+        heightInput.value="";
+        weightInput.value="";
+        imcNumber.classList="";
+        imcInfo.classList="";
 
     }
     //Validação dos caracteres que são aceitos neste campo de input//
@@ -106,7 +108,7 @@
     createTable(data);
 
 
-    //Eventos
+    //Eventos que serão executados
 
     [heightInput,weightInput].forEach((el) => {
 
@@ -159,10 +161,10 @@
                 imcNumber.classList.add("media");
                 imcInfo.classList.add("media");
                 break;
-            case "Obesidade grave":
-                    imcNumber.classList.add("alta");
-                    imcInfo.classList.add("alta");
-                    break;
+            case "Obesidade Grave":
+                imcNumber.classList.add("alta");
+                imcInfo.classList.add("alta");
+                break;
         }
 
         showOrHideResults();

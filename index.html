@@ -8,70 +8,71 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>Indice de massa corporal</title>
+    <title>Índice de massa corporal</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <script src="assets/js/script.js"defer></script>
 </head>
 <body> 
-      <div class="container">
-        <!--Container que nevolve todo contéudo da calculadora-->
-          <div id="calc-container"  >
-                <h2> Calculadora IMC </h2>
-                <!--formulário para o imc-->
-                <form id="imc-form">
-                  <!--espaço destinado para os inputs-->
-                    <div class="form-inputs">
-                      <!--controle de formulário para a altura do individuo-->
-                        <div class="form-control">
-                          <!--label para identificar os inputs relacionados a altura--> 
-                            <label for="height"> Altura </label>
-                            <!--Preenchimentos de informações relacionadas a altura-->
-                            <input 
-                                type="text" 
-                                name="height" 
-                                id="height" 
-                                placeholder="1,75"
-                            />
-                        </div>   
-                        <div class="form-control">
-                          <!--controle de formulário para o peso do individuo-->
-                            <label for="weight"> Peso </label>
-                            <!--Preenchimentos de informações relacionadas ao peso-->
-                            <input type="text" 
-                              name="weight" 
-                              id="weight" 
-                              placeholder="80,65"
-                            />
-                        </div>  
-                    </div>
-                    <div class="action-control">
-                      <!--Botões para realizar o cálculo ou limpar a área de preenchimento para novo questionário-->
-                      <button id="calc-btn"> Calcular </button>
-                      <button id="clear-btn"> Limpar </button>
-                    </div>
-                </form>
-              </div>    
-              <div id="result-container"class="hide">
-                <!--container para resultados-->
-                <p id="imc-number"> Seu IMC: <span></span></p>
-                <p id="imc-info">Situação atual: <span ></span></p>
-                <h3>Confira as classificações:</h3>
-            
-                <div id="imc-table">
-                  <!--tabela de imc-->
-                    <div class="table-header" >
-                      <!--header da tabela de imc contendo as principais informações-->
-                      <h4>IMC</h4>
-                      <h4>Classificação</h4>
-                      <h4>Obesidade</h4>
-                    </div>
+      <main>
+        <div class="container">
+          <!--Container que envolve todo contéudo da calculadora-->
+            <div id="calc-container"  >
+                  <h2> Calculadora IMC </h2>
+                  <!--formulário para o imc-->
+                  <form id="imc-form">
+                    <!--espaço destinado para os inputs-->
+                      <div class="form-inputs">
+                        <!--controle de formulário para a altura do individuo-->
+                          <div class="form-control">
+                            <!--label para identificar os inputs relacionados a altura-->
+                              <label for="height"> Altura </label>
+                              <!--Preenchimentos de informações relacionadas a altura-->
+                              <input
+                                  type="text"
+                                  name="height"
+                                  id="height"
+                                  placeholder="1,75"
+                              />
+                          </div>
+                          <div class="form-control">
+                            <!--controle de formulário para o peso do individuo-->
+                              <label for="weight"> Peso </label>
+                              <!--Preenchimentos de informações relacionadas ao peso-->
+                              <input type="text"
+                                name="weight"
+                                id="weight"
+                                placeholder="80,65"
+                              />
+                          </div>
+                      </div>
+                      <div class="action-control">
+                        <!--Botões para realizar o cálculo ou limpar a área de preenchimento para novo questionário-->
+                        <button id="calc-btn"> Calcular </button>
+                        <button id="clear-btn"> Limpar </button>
+                      </div>
+                  </form>
                 </div>
-                <!--Button para voltar a página inicial-->
-                <button id="back-btn">Voltar</button>
+                <div id="result-container"class="hide">
+                  <!--container para resultados-->
+                  <p id="imc-number"> Seu IMC: <span></span></p>
+                  <p id="imc-info">Situação atual: <span ></span></p>
+                  <h3>Confira as classificações:</h3>
+        
+                  <div id="imc-table">
+                    <!--tabela de imc-->
+                      <div class="table-header" >
+                        <!--header da tabela de imc contendo as principais informações-->
+                        <h4>IMC</h4>
+                        <h4>Classificação</h4>
+                        <h4>Obesidade</h4>
+                      </div>
+                  </div>
+                  <!--Button para voltar a página inicial-->
+                  <button id="back-btn">Voltar</button>
+                </div>
               </div>
             </div>
-
-
-          </div>
+      </main>
       
 </body>
 </html>

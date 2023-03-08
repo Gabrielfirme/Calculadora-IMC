@@ -1,5 +1,4 @@
 
-
 *{
     margin: 0;
     padding: 0;
@@ -7,8 +6,8 @@
   
 }
 :root{
-    --bg-color:#090e22;
-    --bg-color-ct:#1d1e33;
+    --bg-color:#a8b9ff;
+    --bg-color-ct:#045185be;
     --label-color:#ccc;
     --text-color:#FFF;
     --bg-button:#F44236;
@@ -17,6 +16,7 @@
 body{
     background:var(--bg-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -27,12 +27,17 @@ body{
 
 }
 .container{
-    min-width: 40vh;
-    min-height: 60vh;
+    
+    min-width: 80vh;
+    min-height:40vh;
     padding: 2rem;
     background: var(--bg-color-ct);
+    border-radius: 2.6vh;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
 
 }
+
 /*IMC formulário*/
 #calc-container h2{
     text-align: center;
@@ -62,7 +67,7 @@ body{
 .action-control{
     display: flex;
     justify-content:space-between;
-    margin-top: 2rem;
+    margin-top: 0rem;
     gap:1rem;
 }
 
@@ -86,14 +91,15 @@ button:hover{
     background: #444;
 }
 
-/*Table*/
+/*Tabela*/
 #result-container{
     text-align: center;
     display: flex;
     flex-direction: column;
-
+    
 }
 .imc-number{
+    
     font-size: 2.4rem;
     margin-bottom: .6rem;
 }
@@ -106,9 +112,10 @@ button:hover{
     color: #dfdfdf;
 }
 #imc-table{
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 .8rem;
     font-size: .8rem;
     width: 100%;
+    height: 300px;
 }
 .table-header {
     font-weight: bold;
@@ -134,16 +141,79 @@ button:hover{
     align-self: center;
 }
 .bom{
+    font-weight: bold;
     color:#12db34;
 
 }
 .baixa{
+    font-weight: bold;
     color:#dbce12;
 }
 .media{
-    color: #db6212;
+    font-weight: bold;
+    color: #9b3f01;
 
 }
 .alta{
-    color:#db1912;
+    font-weight: bold;
+    color:red;
+}
+
+
+@media screen and (max-width:350px){
+    body{
+        background:var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color:var(--text-color);
+    }
+    .hide{
+        display: none !important;
+    
+    }
+    .container{
+        min-width: 50%;
+        min-height:50vh;
+        padding: 2rem;
+        background: var(--bg-color-ct);
+        border-radius: 2.6vh;
+        margin-top: .5vh;
+    
+    }
+
+}
+@media screen and (max-width:390px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      
+    }
+    body{
+        background:var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color:var(--text-color);
+    }
+    .hide{
+        display: none !important;
+    
+    }
+    .container{
+        min-width: 50%;
+        min-height:50vh;
+        padding: 2rem;
+        background: var(--bg-color-ct);
+        border-radius: 2.6vh;
+        margin-top: .5vh;
+    
+    }
+
+    
 }
