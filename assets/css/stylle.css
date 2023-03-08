@@ -217,3 +217,30 @@ button:hover{
 
     
 }
+
+@media screen and (min-width:1024px){
+    body{
+        background:var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color:var(--text-color);
+    }
+    .hide{
+        display: none !important;
+    
+    }
+    .container{
+        min-width: 80%;
+        min-height:50vh;
+        padding: 2rem;
+        background: var(--bg-color-ct);
+        border-radius: 2.6vh;
+        margin-top: .5vh;
+    
+    }
+
+    
+}
