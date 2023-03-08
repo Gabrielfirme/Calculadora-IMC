@@ -78,7 +78,6 @@
             
         });
     }
-    //função para limpar o campo dos inputs
     function cleanInputs(){
         heightInput.value="";
         weightInput.value="";
@@ -86,11 +85,9 @@
         imcInfo.classList="";
 
     }
-    //Validação dos caracteres que são aceitos neste campo de input//
     function validDigits(text){
         return text.replace(/[^0-9,]/g,"");
     }
-    //função para realizar o cálculo do imc por meio da fórmula//
     function calcImc (height,weight){
         const imc = (weight/(height*height)).toFixed(1);
 
